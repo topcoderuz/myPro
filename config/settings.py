@@ -25,7 +25,7 @@ SECRET_KEY = '$lwv^!^w=$6tmy&6f3-&^4d0cs+6e*0_ozf0tzp99b)3&7^xxy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
