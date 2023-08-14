@@ -4,24 +4,49 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>{% block title %} {% endblock %}</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
-    <!-- <script src='main.js'></script> -->
+    <style>
+    body{background: rgb(152, 207, 225);}
+    a:hover{cursor: pointer;}
+    .link{
+        display: inline-block;
+        width: 120px;
+        height: inherit;
+        border: 2px;
+        border-radius: 6%;
+        border-color: brown;
+        background-color: white;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14pt;
+        margin-left: 15px;
+    }
+    .bdy{
+        margin: 0 15%;
+        background: aquamarine;
+        height: 800px;
+        display: block;
+
+    }
+    </style>
 </head>
 <body>
+    <center>
 <header>
-    <a href="{% url 'home' %}">Bosh sahifa</a>
-    <br/>
-    <a href="{% url 'contact' %}">Kontakt</a>
-    <br/>
-    <a href="{% url 'about' %}">Biz haqimizda</a>
-    <br/>
-    <a href="{% url 'news' %}"> Yangiliklar</a>
+    <a href="{% url 'home' %}" class="link">Bosh sahifa</a>
+
+    <a href="{% url 'contact' %}" class="link">Kontakt</a>
+
+    <a href="{% url 'about' %}" class="link">Biz haqimizda</a>
+
+    <a href="{% url 'news' %}" class="link"> Yangiliklar</a>
 </header>
+    </center>
+    <div class="bdy">
+        {% block content %}
+        
+        {% endblock content %}
+    </div>
 
-    {% block content %}
-
-    {% endblock content %}
 
 
 </body>
